@@ -3,24 +3,24 @@ import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import {
-  Field,
-  FieldDescription,
-  FieldGroup,
-  FieldLabel,
-  FieldSeparator,
+	Field,
+	FieldDescription,
+	FieldGroup,
+	FieldLabel,
+	FieldSeparator,
 } from "@/components/ui/field"
 import { Input } from "@/components/ui/input"
 
 export function LoginForm({
-  className,
-  ...props
+	className,
+	...props
 }: React.ComponentProps<"div">) {
-  const navigate = useNavigate()
+	const navigate = useNavigate()
 
-  function handleSubmit(e: React.FormEvent) {
-    e.preventDefault()
-    navigate("/dashboard")
-  }
+	function handleSubmit(e: React.FormEvent) {
+		e.preventDefault()
+		navigate("/dashboard")
+	}
 
   return (
     <div className={cn("flex flex-col gap-6", className)} {...props}>
