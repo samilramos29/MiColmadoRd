@@ -1,11 +1,9 @@
 import { productService } from "../services/product.service"
 
-export function useProducts(){
+export function useProducts() {
+  const products = productService.getAll()
 
-    const products = productService.getAll()
-
-    return {
-        products
-    }
-
+  return {
+    products,
+  }
 }
