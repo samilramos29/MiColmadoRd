@@ -3,24 +3,24 @@ import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import {
-	Field,
-	FieldDescription,
-	FieldGroup,
-	FieldLabel,
-	FieldSeparator,
+  Field,
+  FieldDescription,
+  FieldGroup,
+  FieldLabel,
+  FieldSeparator,
 } from "@/components/ui/field"
 import { Input } from "@/components/ui/input"
 
 export function LoginForm({
-	className,
-	...props
+  className,
+  ...props
 }: React.ComponentProps<"div">) {
-	const navigate = useNavigate()
+  const navigate = useNavigate()
 
-	function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-		e.preventDefault()
-		navigate("/sale")
-	}
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault()
+    navigate("/sale")
+  }
 
   return (
     <div className={cn("flex flex-col gap-6", className)} {...props}>
@@ -29,11 +29,7 @@ export function LoginForm({
           <form className="p-6 md:p-8" onSubmit={handleSubmit}>
             <FieldGroup>
               <div className="flex flex-col items-center gap-2 text-center">
-                <img
-                src="/logo.png"
-                alt="public/"
-                className="h-14 w-14"
-                />
+                <img src="/logo.png" alt="public/" className="h-14 w-14" />
                 <h1 className="text-2xl font-bold">Mi Colmado RD</h1>
                 <p className="text-balance text-muted-foreground">
                   Inicia sesión en tu cuenta de Colamdo RD
@@ -110,8 +106,9 @@ export function LoginForm({
         </CardContent>
       </Card>
       <FieldDescription className="px-6 text-center">
-        Al hacer clic en continuar, acepta nuestros <a href="#">Términos de servicio</a>{" "}
-        y nuestra <a href="#">Política de privacidad</a>.
+        Al hacer clic en continuar, acepta nuestros{" "}
+        <a href="#">Términos de servicio</a> y nuestra{" "}
+        <a href="#">Política de privacidad</a>.
       </FieldDescription>
     </div>
   )

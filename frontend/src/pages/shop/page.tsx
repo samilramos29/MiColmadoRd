@@ -144,7 +144,10 @@ export default function Page() {
               const price = item.discountPrice ?? item.price
 
               return (
-                <div key={item.id} className="rounded-lg border bg-background p-3">
+                <div
+                  key={item.id}
+                  className="rounded-lg border bg-background p-3"
+                >
                   <div className="flex gap-3">
                     <img
                       src={item.image}
@@ -152,7 +155,9 @@ export default function Page() {
                       className="size-14 rounded-md object-cover"
                     />
                     <div className="min-w-0 flex-1">
-                      <p className="truncate text-sm font-medium">{item.name}</p>
+                      <p className="truncate text-sm font-medium">
+                        {item.name}
+                      </p>
                       <p className="text-xs text-muted-foreground">
                         RD$ {price.toFixed(2)} x {item.quantity}
                       </p>

@@ -31,7 +31,8 @@ const data = {
   user: {
     name: "Santana",
     email: "2022-0835@colrd.com",
-    avatar: "https://imgs.search.brave.com/pD-lVXc9jsIF0EZ0LmN1wj1h45RnQ-5g-CYYtkoLNIw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wMjcv/OTUxLzEzNy9zbWFs/bC9zdHlsaXNoLXNw/ZWN0YWNsZXMtZ3V5/LTNkLWF2YXRhci1j/aGFyYWN0ZXItaWxs/dXN0cmF0aW9ucy1w/bmcucG5n",
+    avatar:
+      "https://imgs.search.brave.com/pD-lVXc9jsIF0EZ0LmN1wj1h45RnQ-5g-CYYtkoLNIw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wMjcv/OTUxLzEzNy9zbWFs/bC9zdHlsaXNoLXNw/ZWN0YWNsZXMtZ3V5/LTNkLWF2YXRhci1j/aGFyYWN0ZXItaWxs/dXN0cmF0aW9ucy1w/bmcucG5n",
   },
   navSecondary: [
     {
@@ -120,7 +121,9 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                 </div>
                 <div className="grid flex-1 text-left text-sm leading-tight">
                   <span className="truncate font-medium">Mi Colmado RD</span>
-                  <span className="truncate text-xs">Tu Colmado En Tus Manos</span>
+                  <span className="truncate text-xs">
+                    Tu Colmado En Tus Manos
+                  </span>
                 </div>
               </a>
             </SidebarMenuButton>

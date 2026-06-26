@@ -1,33 +1,31 @@
 export interface Product {
+  id: number
 
-    id:number
+  name: string
 
-    name:string
+  description: string
 
-    description:string
+  image: string
 
-    image:string
+  images?: string[]
 
-    images?:string[]
+  price: number
 
-    price:number
+  discountPrice?: number
 
-    discountPrice?:number
+  stock: number
 
-    stock:number
+  rating: number
 
-    rating:number
+  reviews: number
 
-    reviews:number
+  category: string
 
-    category:string
+  brand: string
 
-    brand:string
+  featured: boolean
 
-    featured:boolean
+  isNew: boolean
 
-    isNew:boolean
-
-    freeShipping:boolean
-
+  freeShipping: boolean
 }
