@@ -8,12 +8,7 @@ import {
   BreadcrumbList,
 } from "@/components/ui/breadcrumb"
 import { Button } from "@/components/ui/button"
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Separator } from "@/components/ui/separator"
 import {
@@ -148,7 +143,10 @@ export default function SalesDashboard() {
   const ventasCompletadas = ventas.filter(
     (venta) => venta.estado === "Pagada" || venta.estado === "Entregada"
   )
-  const ingresos = ventasCompletadas.reduce((sum, venta) => sum + venta.total, 0)
+  const ingresos = ventasCompletadas.reduce(
+    (sum, venta) => sum + venta.total,
+    0
+  )
   const enProceso = ventas.filter(
     (venta) => venta.estado === "Pendiente" || venta.estado === "Preparando"
   ).length
@@ -371,7 +369,10 @@ export default function SalesDashboard() {
                     </div>
                   ) : (
                     carrito.map((item) => (
-                      <div key={item.id} className="rounded-lg border bg-background p-3">
+                      <div
+                        key={item.id}
+                        className="rounded-lg border bg-background p-3"
+                      >
                         <div className="flex items-start justify-between gap-3">
                           <div className="min-w-0">
                             <p className="truncate text-sm font-medium">
@@ -433,8 +434,12 @@ export default function SalesDashboard() {
 
                 <div className="space-y-2 rounded-lg bg-muted p-3 text-sm">
                   <div className="flex justify-between">
-                    <span className="text-muted-foreground">Producto clave</span>
-                    <span className="max-w-40 truncate">{productoMasVendido}</span>
+                    <span className="text-muted-foreground">
+                      Producto clave
+                    </span>
+                    <span className="max-w-40 truncate">
+                      {productoMasVendido}
+                    </span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-muted-foreground">Articulos</span>

@@ -14,13 +14,13 @@ import { Input } from "@/components/ui/input"
 export function SignupForm({
   className,
   ...props
-}: React.ComponentProps<"div">) {	
+}: React.ComponentProps<"div">) {
   const navigate = useNavigate()
 
-	function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-		e.preventDefault()
-		navigate("/login")
-	}
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault()
+    navigate("/login")
+  }
   return (
     <div className={cn("flex flex-col gap-6", className)} {...props}>
       <Card className="overflow-hidden p-0">
@@ -28,11 +28,7 @@ export function SignupForm({
           <form onSubmit={handleSubmit} className="p-6 md:p-8">
             <FieldGroup>
               <div className="flex flex-col items-center gap-2 text-center">
-                <img
-                src="/logo.png"
-                alt="public/"
-                className="h-14 w-14"
-                />
+                <img src="/logo.png" alt="public/" className="h-14 w-14" />
                 <h1 className="text-2xl font-bold">Crea tu cuenta</h1>
                 <p className="text-sm text-balance text-muted-foreground">
                   Introduce tu correo a continuación para crear tu cuenta.
@@ -47,8 +43,8 @@ export function SignupForm({
                   required
                 />
                 <FieldDescription>
-                  Usaremos esto para ponernos en contacto contigo. No compartiremos tu
-                  correo electrónico con nadie más.
+                  Usaremos esto para ponernos en contacto contigo. No
+                  compartiremos tu correo electrónico con nadie más.
                 </FieldDescription>
               </Field>
               <Field>
@@ -118,8 +114,9 @@ export function SignupForm({
         </CardContent>
       </Card>
       <FieldDescription className="px-6 text-center">
-        Al hacer clic en continuar, acepta nuestros <a href="#">Términos de servicio</a>{" "}
-        y nuestra <a href="#">Política de privacidad</a>.
+        Al hacer clic en continuar, acepta nuestros{" "}
+        <a href="#">Términos de servicio</a> y nuestra{" "}
+        <a href="#">Política de privacidad</a>.
       </FieldDescription>
     </div>
   )

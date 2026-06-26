@@ -33,9 +33,7 @@ export function ProductCard({ product, quantity = 0, onAddToCart }: Props) {
           <Badge variant="secondary">RD$ {price.toFixed(2)}</Badge>
         </CardAction>
         <CardTitle>{product.name}</CardTitle>
-        <CardDescription>
-          {product.description}
-        </CardDescription>
+        <CardDescription>{product.description}</CardDescription>
       </CardHeader>
       <CardContent className="flex items-center justify-between text-xs text-muted-foreground">
         <span>{product.brand}</span>
